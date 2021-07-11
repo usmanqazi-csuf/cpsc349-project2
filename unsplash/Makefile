@@ -20,9 +20,9 @@ all: ../photos
 unsplash-research-dataset-lite-latest.zip:
 	wget --content-disposition https://unsplash.com/data/lite/latest
 
-keywords.tsv000: unsplash-research-dataset-lite-latest.zip
+photos.tsv000: unsplash-research-dataset-lite-latest.zip
 	unzip $<
-	touch keywords.tsv000
+	touch photos.tsv000
 
 keywords.tsv: keywords.tsv000 keywords.sql
 	q -t -H -O "$(shell cat keywords.sql)" > $@

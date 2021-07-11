@@ -8,6 +8,10 @@ site: Pet Photos
 
     <h1>{{ site }}</h1>
 
+    {% unless page.url == '/' %}
+    	<a href="/">Home</a>
+    {% endunless %}
+
     {{ content }}
 
     <ul>
