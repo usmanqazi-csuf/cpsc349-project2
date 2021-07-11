@@ -18,7 +18,7 @@ site: Pet Photos
         {% for photo in collections.photos %}
             <li>
                 <a href="{{ photo.url }}">
-                    {{ photo.data.photo_keyword }} photo
+                    A {{ photo.data.photo_keyword }} photo
                     by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
                 </a>
             </li>
