@@ -1,0 +1,18 @@
+{
+  "name": "cpsc349-project1",
+  "description": "CPSC 349 - Summer 2021 - Project 1",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "author": "Kenytt Avery",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfAvery/cpsc349-project1.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "keywords": [],
+  "license": "UNLICENSED"
+}
