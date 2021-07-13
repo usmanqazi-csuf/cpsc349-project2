@@ -7,20 +7,22 @@ $ sudo apt update
 $ sudo apt install python3-q-text-as-data
 ```
 
-Clone the GitHub repository:
+[Fork][2] the GitHub [cpsc349-project1][3] repository, then [clone][4]
+your forked repository locally:
 
 ```shell-session
-$ git clone https://github.com/ProfAvery/cpsc349-project1.git
+$ git clone https://github.com/USERNAME/cpsc349-project1.git
 ```
 
-Download the [Unsplash Lite dataset][2] and extract some pet photos:
+
+Download the [Unsplash Lite dataset][5] and extract some pet photos:
 
 ``` shell-session
 $ cd cpsc349-project/unsplash
 $ make
 ```
 
-Install and start the [Eleventy static site generator][3]:
+Install and start the [Eleventy static site generator][6]:
 
 ```shell-session
 $ cd ..
@@ -29,9 +31,13 @@ $ npm start
 
 ```
 
-Open the [newly generated site][4].
+Open the [newly generated site][7].
+
 
 [1]: https://harelba.github.io/q/
-[2]: https://github.com/unsplash/datasets
-[3]: https://www.11ty.dev/
-[4]: http://localhost:8080/
+[2]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
+[3]: https://github.com/ProfAvery/cpsc349-project1
+[4]: https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository
+[5]: https://github.com/unsplash/datasets
+[6]: https://www.11ty.dev/
+[7]: http://localhost:8080/
