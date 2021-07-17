@@ -1,6 +1,3 @@
----
-site: Pet Photos
----
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,25 +7,6 @@ site: Pet Photos
         <link rel="stylesheet" href="/styles/tailwind.css">
     </head>
     <body>
-
-        <h1>{{ site }}</h1>
-
-        {% unless page.url == '/' %}
-            <a href="/">Home</a>
-        {% endunless %}
-
         {{ content }}
-
-        <ul>
-            {% for photo in collections.photos %}
-                <li>
-                    <a href="{{ photo.url }}">
-                        A {{ photo.data.photo_keyword }} photo
-                        by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-
     </body>
 </html>

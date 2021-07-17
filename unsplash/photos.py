@@ -11,7 +11,7 @@ with open(sys.argv[1]) as tsvfile:
     for row in photoreader:
         description = row.pop('photo_description')
         row['tags'] = 'photos'
-        row['layout'] = 'base'
+        row['layout'] = 'pets'
         with open(f'../photos/{n:03}.html', 'w') as f:
             yaml.dump(row, f, explicit_start=True)
             print('---', file=f)
