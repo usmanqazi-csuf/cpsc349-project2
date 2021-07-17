@@ -1,28 +1,34 @@
 ---
 site: Pet Photos
 ---
-<head>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ title }} - {{ site }}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/tailwind.css">
+    </head>
+    <body>
 
-    <h1>{{ site }}</h1>
+        <h1>{{ site }}</h1>
 
-    {% unless page.url == '/' %}
-    	<a href="/">Home</a>
-    {% endunless %}
+        {% unless page.url == '/' %}
+            <a href="/">Home</a>
+        {% endunless %}
 
-    {{ content }}
+        {{ content }}
 
-    <ul>
-        {% for photo in collections.photos %}
-            <li>
-                <a href="{{ photo.url }}">
-                    A {{ photo.data.photo_keyword }} photo
-                    by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+        <ul>
+            {% for photo in collections.photos %}
+                <li>
+                    <a href="{{ photo.url }}">
+                        A {{ photo.data.photo_keyword }} photo
+                        by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
 
-</body>
+    </body>
+</html>
