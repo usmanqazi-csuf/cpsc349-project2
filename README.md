@@ -14,7 +14,6 @@ your forked repository locally:
 $ git clone https://github.com/USERNAME/cpsc349-project2.git
 ```
 
-
 Download the [Unsplash Lite dataset][5] and extract some pet photos:
 
 ``` shell-session
@@ -45,6 +44,10 @@ $ git commit -m 'Publishing site updates'
 $ git push origin main
 
 ```
+
+To check the deployment results, click the
+[Environments](../../deployments) link on the right-hand side of the
+page.
 
 
 [1]: https://harelba.github.io/q/
