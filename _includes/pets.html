@@ -5,7 +5,7 @@ layout: base
 <h1>{{ site }}</h1>
 
 {% unless page.url == '/' %}
-    <a href="/">Home</a>
+    <a href="{{ '/' | url }}">Home</a>
 {% endunless %}
 
 {{ content }}
@@ -13,7 +13,7 @@ layout: base
 <ul>
     {% for photo in collections.photos %}
         <li>
-            <a href="{{ photo.url }}">
+            <a href="{{ photo.url | url }}">
                 A {{ photo.data.photo_keyword }} photo
                 by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
             </a>
