@@ -18,7 +18,7 @@ $ git clone https://github.com/USERNAME/cpsc349-project1.git
 Download the [Unsplash Lite dataset][5] and extract some pet photos:
 
 ``` shell-session
-$ cd cpsc349-project/unsplash
+$ cd cpsc349-project1/unsplash
 $ make
 ```
 
