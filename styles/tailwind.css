@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* Custom classes using @apply go here, e.g. */
+
+    .white-text-on-blue-background {
+        @apply text-white bg-blue-500
+    }
+
+}
