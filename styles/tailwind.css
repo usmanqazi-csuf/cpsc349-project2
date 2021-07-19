@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Tailwind classes go here */
 @layer components {
 
-    /* Custom classes using @apply go here, e.g. */
-
-    .white-text-on-blue-background {
+    .custom-tailwind {
         @apply text-white bg-blue-500
     }
 
