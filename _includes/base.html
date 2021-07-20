@@ -8,6 +8,24 @@
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
     <body>
+        <h1>{{ site }}</h1>
+
+        {% unless page.url == '/' %}
+            <a href="{{ '/' | url }}">Home</a>
+        {% endunless %}
+        <!-- {% unless page.url == '/dog' %}
+            <a href="{{ '/dog/' | url }}">Dogs Only</a>
+        {% endunless %}
+        {% unless page.url == '/cat' %}
+            <a href="{{ '/cat/' | url }}">Cats Only</a>
+        {% endunless %}
+        {% unless page.url == '/other' %}
+            <a href="{{ '/other/' | url }}">Other Animals</a>
+        {% endunless %} -->
+        {% unless page.url == '/about/' %}
+            <a href="{{ '/about' | url }}">About Us</a>
+        {% endunless %}
+        
         {{ content }}
     </body>
 </html>
