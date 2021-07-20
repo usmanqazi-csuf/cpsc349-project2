@@ -1,31 +1,124 @@
+---
+site: Pet Photos
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>{{ title }} - {{ site }}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
+        <!-- <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}"> -->
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
     <body>
         <h1>{{ site }}</h1>
 
-        {% unless page.url == '/' %}
+        <!-- {% unless page.url == '/' %}
             <a href="{{ '/' | url }}">Home</a>
         {% endunless %}
-        <!-- {% unless page.url == '/dog' %}
+        {% unless page.url == '/dog/' %}
             <a href="{{ '/dog/' | url }}">Dogs Only</a>
         {% endunless %}
-        {% unless page.url == '/cat' %}
+        {% unless page.url == '/cat/' %}
             <a href="{{ '/cat/' | url }}">Cats Only</a>
         {% endunless %}
-        {% unless page.url == '/other' %}
+        {% unless page.url == '/other/' %}
             <a href="{{ '/other/' | url }}">Other Animals</a>
-        {% endunless %} -->
+        {% endunless %}
         {% unless page.url == '/about/' %}
             <a href="{{ '/about' | url }}">About Us</a>
-        {% endunless %}
+        {% endunless %} -->
         
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | url }}">Home</a></li>
+                <li><a href="{{ '/dog/' | url }}">Dogs Only</a></li>
+                <li><a href="{{ '/cat/' | url }}">Cats Only</a></li>
+                <li><a href="{{ '/other/' | url }}">Other Animals</a></li>
+                <li><a href="{{ '/about' | url }}">About Us</a></li>
+            </ul>
+        </nav>
+    
         {{ content }}
+
+        {% if page.url contains '/photos/' %}
+            <ul>
+                {% if photographer_first_name != '' %}
+                <li><p>Photographer: {{ photographer_first_name }} {{ photographer_last_name }}</p></li>
+                {% else %}
+                <li><p> Photographer: Unknown </p></li>
+                {% endif %}
+
+                {% if exif_camera_make != '' %}
+                <li><p>Camera Make: {{ exif_camera_make }}</p></li>
+                {% else %}
+                <li><p> Camera Make: Unknown </p></li>
+                {% endif %}
+
+                {% if exif_camera_model != '' %}
+                <li><p>Camera Model: {{ exif_camera_model }}</p></li>
+                {% else %}
+                <li><p>Camera Model: Unknown</p></li>
+                {% endif %}
+
+                {% if photo_location_city != '' %}
+                <li><p>City: {{ photo_location_city }}</p></li>
+                {% else %}
+                <li><p>City: Unknown</p></li>
+                {% endif %}
+
+                {% if photo_location_city != '' %}
+                <li><p>Country: {{ photo_location_country }}</p></li>
+                {% else %}
+                <li><p>Country: Unknown</p></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        
+        {% if page.url == '/' %}
+        <ul>
+            {% for photo in collections.photos %}
+            <li>
+                <a href="{{ photo.url | url }}">
+                    {{ photo.data.ai_description }} - 
+                    {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% elsif photo_keyword == 'dog' or title == 'Dogs' %}
+        <ul>
+            {% for dog in collections.dogs %}
+            <li>
+                <a href="{{ dog.url | url }}">
+                    {{ dog.data.ai_description }} - 
+                    {{ dog.data.photographer_first_name}} {{ dog.data.photographer_last_name }} 
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% elsif photo_keyword == 'cat' or title == 'Cats' %}
+        <ul>
+            {% for cat in collections.cats %}
+            <li>
+                <a href="{{ cat.url | url }}">
+                    {{ cat.data.ai_description }} - 
+                    {{ cat.data.photographer_first_name}} {{ cat.data.photographer_last_name }} 
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% elsif page.url != '/about/' %}
+        <ul>
+            {% for other in collections.others %}   
+            <li>
+                <a href="{{ other.url | url }}">
+                    {{ other.data.ai_description }} - 
+                    {{ other.data.photographer_first_name}} {{ other.data.photographer_last_name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </body>
 </html>
