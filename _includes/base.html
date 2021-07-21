@@ -7,35 +7,34 @@ site: Pet Photos
         <title>{{ title }} - {{ site }}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}"> -->
+        <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
     <body>
-        <h1>{{ site }}</h1>
-
-        <!-- {% unless page.url == '/' %}
-            <a href="{{ '/' | url }}">Home</a>
-        {% endunless %}
-        {% unless page.url == '/dog/' %}
-            <a href="{{ '/dog/' | url }}">Dogs Only</a>
-        {% endunless %}
-        {% unless page.url == '/cat/' %}
-            <a href="{{ '/cat/' | url }}">Cats Only</a>
-        {% endunless %}
-        {% unless page.url == '/other/' %}
-            <a href="{{ '/other/' | url }}">Other Animals</a>
-        {% endunless %}
-        {% unless page.url == '/about/' %}
-            <a href="{{ '/about' | url }}">About Us</a>
-        {% endunless %} -->
-        
+            
         <nav>
+            <h1>{{ site }}</h1>
             <ul>
-                <li><a href="{{ '/' | url }}">Home</a></li>
+                <!-- <li><a href="{{ '/' | url }}">Home</a></li>
                 <li><a href="{{ '/dog/' | url }}">Dogs Only</a></li>
                 <li><a href="{{ '/cat/' | url }}">Cats Only</a></li>
                 <li><a href="{{ '/other/' | url }}">Other Animals</a></li>
+                <li><a href="{{ '/about' | url }}">About Us</a></li> -->
+                {% unless page.url == '/' %}
+                <li><a href="{{ '/' | url }}">Home</a></li>
+                {% endunless %}
+                {% unless page.url == '/dog/' %}
+                <li><a href="{{ '/dog/' | url }}">Dogs Only</a></li>
+                {% endunless %}
+                {% unless page.url == '/cat/' %}
+                <li><a href="{{ '/cat/' | url }}">Cats Only</a></li>
+                {% endunless %}
+                {% unless page.url == '/other/' %}
+                <li><a href="{{ '/other/' | url }}">Other Animals</a></li>
+                {% endunless %}
+                {% unless page.url == '/about/' %}
                 <li><a href="{{ '/about' | url }}">About Us</a></li>
+                {% endunless %}
             </ul>
         </nav>
     
