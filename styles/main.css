@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Start navbar */
 
 nav {
@@ -21,6 +25,7 @@ nav ul {
 
 nav ul li {
     padding: 20px;
+    font-size: 1.1rem;
 }
 
 nav ul li a:hover {
@@ -28,39 +33,56 @@ nav ul li a:hover {
 }
 
 .active-page {
-    text-decoration: underline;
+    color: skyblue;
+    font-weight: bold;
+    text-decoration: underline dashed;
+    text-underline-offset: 5px;
 }
+
 /* End navbar */
 
 /* Start about us page */
 
 .about-us-section {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 25px 60px 0 60px;
+    padding: 25px 60px;
 }
 
 .about-us-section h2 {
-    display: flex;
+    flex: 0 1 100%;
     font-size: 1.6rem;
     font-weight: 600;
 }
 
+.about-us-section h2~p {
+    padding: 25px 175px;
+}
+
 .about-us-section h3 {
+    flex: 1 0 100%;
     font-size: 1.5rem;
+    padding-right: 50%;
     font-weight: 500;
 }
 
-.about-us-section p {
-    padding: 5px 20px 20px 20px;
+.about-us-section h3~p {
+    flex: 0 1 50%;
 }
 
 .image-container {
+    flex: 0 1 20%;
     display: flex;
     justify-content: center;
+}
+
+.image-container img {
+    width: 275px;
 }
 
 /* End about us page */
