@@ -1,0 +1,66 @@
+/* Start navbar */
+
+nav {
+    color: white;
+    background-color: seagreen;
+}
+
+nav h1 {
+    display: flex;
+    color: black;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li a:hover {
+    color: skyblue;
+}
+
+.active-page {
+    text-decoration: underline;
+}
+/* End navbar */
+
+/* Start about us page */
+
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px 60px 0 60px;
+}
+
+.about-us-section h2 {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.about-us-section h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.about-us-section p {
+    padding: 5px 20px 20px 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* End about us page */

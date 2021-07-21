@@ -614,9 +614,7 @@ video {
   }
 }
 
-/* Custom classes using @apply go here, e.g. */
-
-.white-text-on-blue-background {
+.custom-tailwind {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -32228,6 +32226,8 @@ video {
 .content-none {
   content: none;
 }
+
+/* Custom Tailwind classes go here */
 
 @media (min-width: 640px) {
   .sm\:container {
