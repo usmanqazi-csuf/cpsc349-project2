@@ -45,6 +45,59 @@ nav ul li a:hover {
 
 /* End navbar */
 
+/* Start home page */
+
+#pet-photos-source {
+    margin: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#pet-photos-source a {
+    color: blue;
+}
+
+.pet-photos-wrapper {
+    display: flex;
+    margin: 25px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-photo-container {
+    display: flex;
+    background-color: rgb(208, 255, 208);
+    padding: 25px;
+    margin: 15px;
+    border-radius: 10px;
+    border: lightgreen 5px solid;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-photo-description-container {
+    flex: 75%;
+    margin: 0px 25px;
+}
+
+.pet-photo-image-container {
+    display: flex;
+    flex: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-photo-image-container img {
+    width: 100px;
+    text-align: center;
+    border: green 2px solid;
+}
+
+/* End home page */
+
 /* Start about us page */
 
 .about-us-section {
