@@ -75,7 +75,7 @@ nav ul li a:hover {
 .pet-photo-container {
     display: flex;
     flex: 50%;
-    width: 550px;
+    width: 650px;
     height: 175px;
     background-color: rgb(208, 255, 208);
     padding: 25px;
