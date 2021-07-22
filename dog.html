@@ -1,12 +1,15 @@
 ---
 title: Dogs
 layout: base
+pagination:
+  data: collections.dogs
+  size: 5
 ---
 <h2 class="page-header">A page for dog lovers</h2>
 
 <!-- We could add pagination to all these files -->
 
-{% for photo in collections.dogs %}
+{% for photo in pagination.items %}
 <a href="{{ photo.url | url }}">
     <div class="pet-photo-container">
         <div class="pet-photo-description-container">
@@ -20,3 +23,8 @@ layout: base
     </div>
 </a>
 {% endfor %}
+
+<ol class="next-previous-area">
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}{% endif %}</li>
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}{% endif %}</li>
+</ol>
