@@ -58,19 +58,7 @@ site: Pet Photos
                 {% endif %}
             </ul>
         {% endif %}
-        
-        {% if page.url == '/' %}
-        <ul>
-            {% for photo in collections.photos %}
-            <li>
-                <a href="{{ photo.url | url }}">
-                    {{ photo.data.ai_description }} - 
-                    {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% elsif photo_keyword == 'dog' or title == 'Dogs' %}
+        {% if photo_keyword == 'dog' or title == 'Dogs' %}
         <ul>
             {% for dog in collections.dogs %}
             <li>
@@ -92,7 +80,7 @@ site: Pet Photos
             </li>
             {% endfor %}
         </ul>
-        {% elsif page.url != '/about/' %}
+        {% elsif photo_keyword == 'other' or title == 'Other' %}
         <ul>
             {% for other in collections.others %}   
             <li>

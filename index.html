@@ -1,9 +1,23 @@
 ---
 title: Welcome
 layout: base
+pagination:
+  data: collections.photos
+  size: 5
 ---
 <p>
     Pet photos from
     <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
         Unsplash
     </a>
+
+    <ul>
+        {% for photo in pagination.items %}
+        <li>
+            <a href="{{ photo.url | url }}">
+                {{ photo.data.ai_description }} - 
+                {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
