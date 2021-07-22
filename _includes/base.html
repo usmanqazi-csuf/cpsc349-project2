@@ -69,44 +69,57 @@ site: Pet Photos
                             {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
                         </div>
                         <div class="pet-photo-image-container">
-                            <img src="{{ photo.data.photo_image_url }}" alt="hi">
+                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
                         </div>
                     </div>
                 </a>
                 {% endfor %}
             {% elsif photo_keyword == 'dog' or title == 'Dogs' %}
-            <ul>
-                {% for dog in collections.dogs %}
-                <li>
-                    <a href="{{ dog.url | url }}">
-                        {{ dog.data.ai_description }} - 
-                        {{ dog.data.photographer_first_name}} {{ dog.data.photographer_last_name }} 
-                    </a>
-                </li>
+                {% for photo in collections.dogs %}
+                <a href="{{ photo.url | url }}">
+                    <div class="pet-photo-container">
+                        <div class="pet-photo-description-container">
+                            {{ photo.data.ai_description }} - 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
+                        </div>
+                        <div class="pet-photo-image-container">
+                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
+                        </div>
+                    </div>
+                </a>
                 {% endfor %}
-            </ul>
             {% elsif photo_keyword == 'cat' or title == 'Cats' %}
-            <ul>
-                {% for cat in collections.cats %}
-                <li>
-                    <a href="{{ cat.url | url }}">
-                        {{ cat.data.ai_description }} - 
-                        {{ cat.data.photographer_first_name}} {{ cat.data.photographer_last_name }} 
-                    </a>
-                </li>
+                {% for photo in collections.cats %}
+                <a href="{{ photo.url | url }}">
+                    <div class="pet-photo-container">
+                        <div class="pet-photo-description-container">
+                            {{ photo.data.ai_description }} - 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
+                        </div>
+                        <div class="pet-photo-image-container">
+                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
+                        </div>
+                    </div>
+                </a>
                 {% endfor %}
-            </ul>
             {% elsif page.url != '/about/' %}
-            <ul>
-                {% for other in collections.others %}   
-                <li>
-                    <a href="{{ other.url | url }}">
-                        {{ other.data.ai_description }} - 
-                        {{ other.data.photographer_first_name}} {{ other.data.photographer_last_name }}
-                    </a>
-                </li>
+                {% for photo in collections.others %}
+                <a href="{{ photo.url | url }}">
+                    <div class="pet-photo-container">
+                        <div class="pet-photo-description-container">
+                            {{ photo.data.ai_description }} - 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
+                        </div>
+                        <div class="pet-photo-image-container">
+                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
+                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
+                        </div>
+                    </div>
+                </a>
                 {% endfor %}
-            </ul>
             {% endif %}
         </div>
     </body>

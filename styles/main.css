@@ -47,14 +47,14 @@ nav ul li a:hover {
 
 /* Start home page */
 
-#pet-photos-source {
+.page-header {
     margin: 25px;
     text-align: center;
     font-weight: bold;
     font-size: 1rem;
 }
 
-#pet-photos-source a {
+.page-header a {
     color: blue;
 }
 
