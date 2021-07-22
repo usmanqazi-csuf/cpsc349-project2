@@ -80,8 +80,8 @@ Only shared functionality for all pages (like the meta data) should be posted he
             </li>
             {% endfor %}
             <div class="next-previous-area">
-                <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}{% endif %}</li>
-                <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}{% endif %}</li>
+                <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous | url}}">Previous</a>{% else %}{% endif %}</li>
+                <li>{% if pagination.href.next %}<a href="{{ pagination.href.next | url }}">Next</a>{% else %}{% endif %}</li>
             </div>
         </div>
 
