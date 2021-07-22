@@ -34,6 +34,7 @@ nav ul li {
 
 nav ul li a:hover {
     color: skyblue;
+    transition: linear 200ms;
 }
 
 .active-page {
@@ -61,13 +62,21 @@ nav ul li a:hover {
 .pet-photos-wrapper {
     display: flex;
     margin: 25px 0;
-    flex-direction: column;
+    flex: 100%;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
+.pet-photos-wrapper li {
+    list-style: none;
+}
+
 .pet-photo-container {
     display: flex;
+    flex: 50%;
+    width: 550px;
+    height: 175px;
     background-color: rgb(208, 255, 208);
     padding: 25px;
     margin: 15px;
@@ -77,13 +86,18 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.pet-photo-container:hover {
+    background-color: rgb(210, 242, 255);
+    transition: linear 200ms;
+}
+
 .pet-photo-description-container {
     flex: 75%;
     margin: 0px 25px;
+    font-size: 1.2rem;
 }
 
 .pet-photo-image-container {
-    display: flex;
     flex: 25%;
     justify-content: center;
     align-items: center;
@@ -94,6 +108,23 @@ nav ul li a:hover {
     width: 100px;
     text-align: center;
     border: green 2px solid;
+}
+
+.next-previous-area {
+    display: flex;
+    flex: 100%;
+    margin-top: 25px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.next-previous-area li {
+    color: blue;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.6rem;
 }
 
 /* End home page */
