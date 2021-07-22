@@ -1,6 +1,8 @@
 ---
 site: Pet Photos
 ---
+<!-- The purpose of this page is to serve only as a base template. We should not add any functionality in here.
+Only shared functionality for all pages (like the meta data) should be posted here -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,52 +60,6 @@ site: Pet Photos
                 {% endif %}
             </ul>
         {% endif %}
-            {% if photo_keyword == 'dog' or title == 'Dogs' %}
-                {% for photo in collections.dogs %}
-                <a href="{{ photo.url | url }}">
-                    <div class="pet-photo-container">
-                        <div class="pet-photo-description-container">
-                            {{ photo.data.ai_description }} - 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
-                        </div>
-                        <div class="pet-photo-image-container">
-                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            {% elsif photo_keyword == 'cat' or title == 'Cats' %}
-                {% for photo in collections.cats %}
-                <a href="{{ photo.url | url }}">
-                    <div class="pet-photo-container">
-                        <div class="pet-photo-description-container">
-                            {{ photo.data.ai_description }} - 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
-                        </div>
-                        <div class="pet-photo-image-container">
-                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            {% elsif photo_keyword == 'other' or title == 'Other' %}
-                {% for photo in collections.others %}
-                <a href="{{ photo.url | url }}">
-                    <div class="pet-photo-container">
-                        <div class="pet-photo-description-container">
-                            {{ photo.data.ai_description }} - 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }} 
-                        </div>
-                        <div class="pet-photo-image-container">
-                            <img src="{{ photo.data.photo_image_url }}" alt="A {{ photo.data.photo_keyword }} photo by 
-                            {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}">
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            {% endif %}
         </div>
     </body>
 </html>
