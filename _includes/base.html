@@ -7,17 +7,13 @@ site: Pet Photos
         <title>{{ title }} - {{ site }}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="{{ '/styles/tailwind.css?version=1' | url }}">
+        <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
     <body>
             
         <nav>
-            {% if page.url == '/' or page.url contains '/photos' %}
             <h1>{{ site }}</h1>
-            {% else %}
-            <h1>{{ title }} - {{ site }}</h1>
-            {% endif %}
             <ul>
                 <li><a href="{{ '/' | url }}" class="{% if page.url == '/' %}active-page{% endif %}">Home</a></li>
                 <li><a href="{{ '/dog/' | url }}" class="{% if page.url == '/dog/' %}active-page{% endif %}">Dogs Only</a></li>
