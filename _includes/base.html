@@ -10,16 +10,11 @@ site: Pet Photos
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
+
     <body>
-            
-        <nav>
-            <h1>{{ site }}</h1>
+        <h1 class="banner">{{ site }}</h1>
+        <nav> 
             <ul>
-                <!-- <li><a href="{{ '/' | url }}">Home</a></li>
-                <li><a href="{{ '/dog/' | url }}">Dogs Only</a></li>
-                <li><a href="{{ '/cat/' | url }}">Cats Only</a></li>
-                <li><a href="{{ '/other/' | url }}">Other Animals</a></li>
-                <li><a href="{{ '/about' | url }}">About Us</a></li> -->
                 {% unless page.url == '/' %}
                 <li><a href="{{ '/' | url }}">Home</a></li>
                 {% endunless %}
@@ -38,43 +33,49 @@ site: Pet Photos
             </ul>
         </nav>
     
-        {{ content }}
+        {% if content %}
+        <main>
+            {{ content }}
 
-        {% if page.url contains '/photos/' %}
-            <ul>
-                {% if photographer_first_name != '' %}
-                <li><p>Photographer: {{ photographer_first_name }} {{ photographer_last_name }}</p></li>
-                {% else %}
-                <li><p> Photographer: Unknown </p></li>
-                {% endif %}
+            {% if page.url contains '/photos/' %}
+                <ul>
+                    {% if photographer_first_name != '' %}
+                    <li><p>Photographer: {{ photographer_first_name }} {{ photographer_last_name }}</p></li>
+                    {% else %}
+                    <li><p> Photographer: Unknown </p></li>
+                    {% endif %}
 
-                {% if exif_camera_make != '' %}
-                <li><p>Camera Make: {{ exif_camera_make }}</p></li>
-                {% else %}
-                <li><p> Camera Make: Unknown </p></li>
-                {% endif %}
+                    {% if exif_camera_make != '' %}
+                    <li><p>Camera Make: {{ exif_camera_make }}</p></li>
+                    {% else %}
+                    <li><p> Camera Make: Unknown </p></li>
+                    {% endif %}
 
-                {% if exif_camera_model != '' %}
-                <li><p>Camera Model: {{ exif_camera_model }}</p></li>
-                {% else %}
-                <li><p>Camera Model: Unknown</p></li>
-                {% endif %}
+                    {% if exif_camera_model != '' %}
+                    <li><p>Camera Model: {{ exif_camera_model }}</p></li>
+                    {% else %}
+                    <li><p>Camera Model: Unknown</p></li>
+                    {% endif %}
 
-                {% if photo_location_city != '' %}
-                <li><p>City: {{ photo_location_city }}</p></li>
-                {% else %}
-                <li><p>City: Unknown</p></li>
-                {% endif %}
+                    {% if photo_location_city != '' %}
+                    <li><p>City: {{ photo_location_city }}</p></li>
+                    {% else %}
+                    <li><p>City: Unknown</p></li>
+                    {% endif %}
 
-                {% if photo_location_city != '' %}
-                <li><p>Country: {{ photo_location_country }}</p></li>
-                {% else %}
-                <li><p>Country: Unknown</p></li>
-                {% endif %}
-            </ul>
+                    {% if photo_location_city != '' %}
+                    <li><p>Country: {{ photo_location_country }}</p></li>
+                    {% else %}
+                    <li><p>Country: Unknown</p></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+            
+        </main>
         {% endif %}
-        
+
         {% if page.url == '/' %}
+        <div class="links">
         <ul>
             {% for photo in collections.photos %}
             <li>
@@ -119,5 +120,8 @@ site: Pet Photos
             {% endfor %}
         </ul>
         {% endif %}
+        </div>
+
+        <footer>This is the footer</footer>
     </body>
 </html>
