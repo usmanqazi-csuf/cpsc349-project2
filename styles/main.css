@@ -141,4 +141,12 @@ nav ul li a:hover {
     width: 275px;
 }
 
+/* Next button */
+
+.next-previous-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /* End about us page */
