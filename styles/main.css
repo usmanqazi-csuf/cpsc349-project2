@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    top: 34px;
-}
-
 html, body {
     height: 100%;
 }
@@ -121,7 +117,7 @@ nav ul li a:hover {
 .next-previous-area {
     display: flex;
     flex: 100%;
-    margin-top: 25px;
+    margin: 25px 0 50px 0;
     justify-content: space-evenly;
     text-align: center;
 }
