@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/* Start nav bar */
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +34,7 @@ nav ul li {
 
 nav ul li a:hover {
     color: skyblue;
-    transition: linear 200ms;
+    transition: ease-in-out 200ms;
 }
 
 .active-page {
@@ -86,7 +88,7 @@ nav ul li a:hover {
 
 .pet-photo-container:hover {
     background-color: rgb(210, 242, 255);
-    transition: linear 200ms;
+    transition: ease-in-out 200ms;
 }
 
 .pet-photo-description-container {
@@ -131,23 +133,45 @@ nav ul li a:hover {
 
 .pet-photo-file {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     margin: 25px;
 }
 
-.pet-photo-file img {
-    text-align: center;
+.pet-photo-file {
+    /* height: 100%; */
+}
+
+.pet-photo-file-image-container {
+    display: flex;
     justify-content: center;
-    width: 400px;
+    vertical-align: middle;
+    width: 900px;
+    height: 575px;
+    margin: 0px 25px;
+}
+
+.pet-photo-file-image-container img {
+    border-radius: 25px;
 }
 
 .pet-photo-file h2 {
     font-size: 1.4rem;
     font-weight: bold;
     margin: 10px;
+}
+
+.pet-photo-file-description-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-photo-file-description-container a:hover {
+    color: lightskyblue;
+    transition: ease-in-out 200ms;
 }
 
 /* End pet photo page */
