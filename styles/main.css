@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Start navbar */
-
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -128,6 +126,31 @@ nav ul li a:hover {
 }
 
 /* End home page */
+
+/* Start pet photo page */
+
+.pet-photo-file {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.pet-photo-file img {
+    text-align: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.pet-photo-file h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* End pet photo page */
 
 /* Start about us page */
 

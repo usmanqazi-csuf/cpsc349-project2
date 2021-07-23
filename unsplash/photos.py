@@ -14,14 +14,15 @@ with open(sys.argv[1]) as tsvfile:
         if animal_tag != 'dogs':
             if animal_tag != 'cats':
                 animal_tag = 'others'
-        row['tags'] = 'photos', animal_tag
+        tags = ['photos', animal_tag]
+        row['tags'] = tags
         row['layout'] = 'base'
         with open(f'../photos/{n:03}.html', 'w') as f:
             yaml.dump(row, f, explicit_start=True)
             print('---', file=f)
             html = f"""    <div class="pet-photo-file">
         <img src="{{{{ photo_image_url }}}}" height="600"/>
-        <figcaption>{description}</figcaption>
+        <h2>{description}</h2>
     </div>"""
             print(html, file=f)
         n += 1
