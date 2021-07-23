@@ -27,39 +27,6 @@ Only shared functionality for all pages (like the meta data) should be posted he
     
         {{ content }}
 
-        {% if page.url contains '/photos/' %}
-            <ul>
-                {% if photographer_first_name != '' %}
-                <li><p>Photographer: {{ photographer_first_name }} {{ photographer_last_name }}</p></li>
-                {% else %}
-                <li><p> Photographer: Unknown </p></li>
-                {% endif %}
-
-                {% if exif_camera_make != '' %}
-                <li><p>Camera Make: {{ exif_camera_make }}</p></li>
-                {% else %}
-                <li><p> Camera Make: Unknown </p></li>
-                {% endif %}
-
-                {% if exif_camera_model != '' %}
-                <li><p>Camera Model: {{ exif_camera_model }}</p></li>
-                {% else %}
-                <li><p>Camera Model: Unknown</p></li>
-                {% endif %}
-
-                {% if photo_location_city != '' %}
-                <li><p>City: {{ photo_location_city }}</p></li>
-                {% else %}
-                <li><p>City: Unknown</p></li>
-                {% endif %}
-
-                {% if photo_location_city != '' %}
-                <li><p>Country: {{ photo_location_country }}</p></li>
-                {% else %}
-                <li><p>Country: Unknown</p></li>
-                {% endif %}
-            </ul>
-        {% endif %}
         </div>
 
     </body>
