@@ -10,14 +10,18 @@ with open(sys.argv[1]) as tsvfile:
     n = 0
     for row in photoreader:
         description = row.pop('photo_description')
-        row['tags'] = 'photos'
-        row['layout'] = 'pets'
+        animal_tag = row.get('photo_keyword') + 's'
+        if animal_tag != 'dogs':
+            if animal_tag != 'cats':
+                animal_tag = 'others'
+        row['tags'] = 'photos', animal_tag
+        row['layout'] = 'base'
         with open(f'../photos/{n:03}.html', 'w') as f:
             yaml.dump(row, f, explicit_start=True)
             print('---', file=f)
-            html = f"""    <figure>
-        <img src="{{{{ photo_image_url }}}}" height="600" />
+            html = f"""    <div class="pet-photo-file">
+        <img src="{{{{ photo_image_url }}}}" height="600"/>
         <figcaption>{description}</figcaption>
-    </figure>"""
+    </div>"""
             print(html, file=f)
         n += 1
