@@ -52,6 +52,36 @@ nav ul li a:hover {
 
 /* End navbar */
 
+/* Start Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    color: white;
+    background-color: seagreen;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    position:absolute;
+    top:25px;
+    left: 500px;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    font-size: 35px;
+}
+
+footer ul {
+    text-align: left;
+    position: relative;
+    padding-top: 10px;
+}
+
+/* End Footer */
+
 /* Start home page */
 
 .page-header {
