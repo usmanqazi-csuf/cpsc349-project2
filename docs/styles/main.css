@@ -47,7 +47,7 @@ nav ul li a:hover {
     color: skyblue;
     font-weight: bold;
     text-decoration: underline dashed;
-    text-underline-offset: 5px;
+    text-decoration-line:overline;
 }
 
 /* End navbar */
