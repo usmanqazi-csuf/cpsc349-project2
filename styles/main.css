@@ -53,7 +53,8 @@ nav ul li a:hover {
 /* End navbar */
 
 /* Start Footer */
-footer {
+
+/* footer {
     display: flex;
     justify-content: center;
     position: relative;
@@ -61,23 +62,58 @@ footer {
     color: white;
     background-color: seagreen;
     text-align: center;
-}
+} */
 
-footer div {
+/* footer div {
     display: flex;
     position:absolute;
-    top:25px;
+    top: 25px;
     left: 500px;
     flex-direction: row;
     justify-content: left;
     align-items: flex-start;
     font-size: 35px;
-}
+} */
 
-footer ul {
+/* footer ul {
     text-align: left;
     position: relative;
     padding-top: 10px;
+} */
+
+footer {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    color: white;
+    background-color: seagreen;
+    z-index: 1;
+}
+
+footer h1 {
+    flex: 25%;
+    margin: auto 0;
+    padding-left: 100px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer ul li {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+footer ul li a:hover {
+    color: skyblue;
+    transition: ease-in-out 200ms;
 }
 
 /* End Footer */
@@ -213,6 +249,10 @@ footer ul {
 /* End pet photo page */
 
 /* Start about us page */
+
+.about-us-container {
+    margin: 25px 0;
+}
 
 .about-us-section {
     display: flex;
