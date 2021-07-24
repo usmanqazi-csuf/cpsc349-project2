@@ -17,7 +17,7 @@ nav {
     z-index: 1;
 }
 
-nav h1 {
+nav h2 {
     flex: 25%;
     margin: auto 0;
     padding-left: 100px;
@@ -63,7 +63,7 @@ footer {
     z-index: 1;
 }
 
-footer h1 {
+footer h2 {
     flex: 25%;
     margin: auto 0;
     padding-left: 100px;
