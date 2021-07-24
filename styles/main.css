@@ -113,10 +113,6 @@ footer ul li a:hover {
     justify-content: center;
 }
 
-.pet-photos-wrapper li {
-    list-style: none;
-}
-
 .pet-photo-container {
     display: flex;
     flex: 50%;
@@ -163,9 +159,9 @@ footer ul li a:hover {
     text-align: center;
 }
 
-.next-previous-area li {
+.next-previous-area h2 {
     color: blue;
-    list-style: none;
+    /* list-style: none; */
     justify-content: center;
     text-align: center;
     font-weight: bolder;
