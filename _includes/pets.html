@@ -8,7 +8,7 @@ site: Pet Photos
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
-        <link rel="stylesheet" href="{{ '/styles/main.css?version=1' | url }}">
+        <link rel="stylesheet" href="{{ '/styles/main.css?version=2' | url }}">
         <style>
             :root {
                 --red: {{ red }};
@@ -47,7 +47,7 @@ site: Pet Photos
     </head>
     <body class="pet-page-body">
         <nav>
-            <h1>{{ site }}</h1>
+            <h2>{{ site }}</h2>
             <ul>
                 <li><a href="{{ '/' | url }}" class="{% if page.url == '/' %}active-page{% endif %}">Home</a></li>
                 <li><a href="{{ '/dog/' | url }}" class="{% if page.url == '/dog/' %}active-page{% endif %}">Dogs Only</a></li>
