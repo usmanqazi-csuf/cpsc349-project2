@@ -67,11 +67,21 @@ footer div {
     display: flex;
     position:absolute;
     top:25px;
-    left: 500px;
+    left: 400px;
     flex-direction: row;
     justify-content: left;
     align-items: flex-start;
     font-size: 35px;
+}
+
+footer div2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:25px;
+    right: -35px;
+    flex-direction: row;
+    font-size: 20px;
 }
 
 footer ul {
@@ -79,6 +89,14 @@ footer ul {
     position: relative;
     padding-top: 10px;
 }
+
+footer ul2 {
+    text-align: left;
+    position: relative;
+    padding-top: 10px;
+    right: -100px;
+}
+
 
 /* End Footer */
 
