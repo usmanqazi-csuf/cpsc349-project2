@@ -17,7 +17,7 @@ nav {
     z-index: 1;
 }
 
-nav h1 {
+nav h2 {
     flex: 25%;
     margin: auto 0;
     padding-left: 100px;
@@ -47,20 +47,20 @@ nav ul li a:hover {
     color: skyblue;
     font-weight: bold;
     text-decoration: underline dashed;
-    text-underline-offset: 5px;
+    text-decoration-line:overline;
 }
 
 /* End navbar */
 
-/* Start Footer */
+/* Start footer */
+
 footer {
     display: flex;
-    justify-content: center;
     position: relative;
     flex-wrap: wrap;
     color: white;
     background-color: seagreen;
-    text-align: center;
+    z-index: 1;
 }
 
 footer div {
@@ -74,6 +74,15 @@ footer div {
     font-size: 35px;
 }
 
+footer h2 {
+    flex: 25%;
+    margin: auto 0;
+    padding-left: 100px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
 footer div2 {
     display: flex;
     justify-content: center;
@@ -85,9 +94,10 @@ footer div2 {
 }
 
 footer ul {
-    text-align: left;
-    position: relative;
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 footer ul2 {
@@ -99,6 +109,19 @@ footer ul2 {
 
 
 /* End Footer */
+
+footer ul li {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+footer ul li a:hover {
+    color: skyblue;
+    transition: ease-in-out 200ms;
+}
+
+/* End footer */
+
 
 /* Start home page */
 
@@ -120,10 +143,6 @@ footer ul2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.pet-photos-wrapper li {
-    list-style: none;
 }
 
 .pet-photo-container {
@@ -172,9 +191,9 @@ footer ul2 {
     text-align: center;
 }
 
-.next-previous-area li {
+.next-previous-area h2 {
     color: blue;
-    list-style: none;
+    /* list-style: none; */
     justify-content: center;
     text-align: center;
     font-weight: bolder;
@@ -231,6 +250,10 @@ footer ul2 {
 /* End pet photo page */
 
 /* Start about us page */
+
+.about-us-container {
+    margin: 25px 0;
+}
 
 .about-us-section {
     display: flex;

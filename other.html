@@ -8,8 +8,7 @@ pagination:
 <h2 class="page-header">A page for those who don't like cats or dogs</h2>
 
 <div class="pet-photos-wrapper">
-  {% for photo in pagination.items %}
-  <li>
+    {% for photo in pagination.items %}
       <a href="{{ photo.url | url }}">
           <div class="pet-photo-container">
               <div class="pet-photo-description-container">
@@ -22,10 +21,9 @@ pagination:
               </div>
           </div>
       </a>
-  </li>
-  {% endfor %}
-  <div class="next-previous-area">
-      <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous | url}}">Previous</a>{% else %}{% endif %}</li>
-      <li>{% if pagination.href.next %}<a href="{{ pagination.href.next | url }}">Next</a>{% else %}{% endif %}</li>
-  </div>
+    {% endfor %}
+    <div class="next-previous-area">
+      {% if pagination.href.previous %}<h2><a href="{{ pagination.href.previous | url}}">Previous</a></h2>{% endif %}
+      {% if pagination.href.next %}<h2><a href="{{ pagination.href.next | url }}">Next</a></h2>{% endif %}
+    </div>
 </div>
